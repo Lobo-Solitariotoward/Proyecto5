@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto 5 Template Strings</title>
+</head>
+<body>
+    <h1 id="lista">Proyecto 5</h1>
+    <p>Este es el proyecto 5</p>
+ 
+    <script>
+        let lista = document.getElementById('lista');
+        let texto = "Hola mi nombre es Angel y acabo de cumplir 19 años";
+        console.log(texto);
+ 
+        console.log(`Otra forma de manejar cadenas string`);
+ 
+        let text = `Cadena multilinea
+            brown fox
+            jumps over
+            the lazy dog`;
+        console.log(text);
+        let a = 5;
+        let b = 10;
+        console.log(`El resultado de la suma de ${a} y ${b} es ${a+b}
+       
+        Multiplica ${a} por ${b} es ${a*b}
+ 
+        Divide ${a} entre ${b} es ${a/b}
+        `);
+
+        //Alt + 96 = apostrofe invertido (backtick)
+        
+        let persona = "Mike";
+        let edad = 16;
+        
+        function miFuncion(cadenas,personaX,edadExp){
+            
+        let resultado = "";
+        console.log(cadenas);
+        console.log(cadenas[2])
+        resultado = edadExp < 18 ? resultado = "Menor de edad" : resultado = "Mayor de edad";
+        return resultado;
+
+    }
+        //console.log(miFuncion("Hola", "Angel", "19 años"));
+        //JSON JAVA SCRIPT OBJECT NOTATION
+        //API APLICATION PROGRAMMING INTERFACE
+        //XML EXTENSIBLE MARKUP LANGUAGE
+        //AJAX ASYNCRONOUS JAVASCRIPT AND XML
+
+        let resultado2 = miFuncion`Hola, ${persona}, buenos días tienes ${edad} años`;
+        console.log(resultado2);
+
+    let titulo = "Ganadores de Oscares";
+    let cadena = ["Billie Eilish", "Eminem", "Rihanna", "Adele"];
+    let cadenaHTML = `<h1>${titulo}</h1>`
+
+    cadenaHTML += `<ul>`;
+
+    for (let cantante of cadena){
+        cadenaHTML += `<li>${cantante}</li>`;
+    }
+    cadenaHTML += `</ul>`;
+
+    lista.innerHTML = cadenaHTML;
+
+    </script>
+   
+</body>
+</html>
